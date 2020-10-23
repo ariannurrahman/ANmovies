@@ -16,11 +16,15 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <form onSubmit={onSearchSubmit}>
-        <input type="text" onChange={searchBar} value={searchChange} />
-        <input type="submit" />
-      </form>
-      <TheMovieDB searchQuery={searchQuery} />
+      <div className="home-wrapper">
+        <form onSubmit={onSearchSubmit}>
+          <input type="text" onChange={searchBar} value={searchChange} />
+          <input type="submit" />
+        </form>
+        <div className="home-poster">
+          <TheMovieDB searchQuery={searchQuery} />
+        </div>
+      </div>
     </div>
   );
 };
