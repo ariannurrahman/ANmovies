@@ -1,0 +1,29 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #171219;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 10vh;
+}
+.header-container .header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+.header-container .header-wrapper .header-logo-wrapper img {
+  width: 50%;
+}
+.header-container .header-wrapper a {
+  color: #f4fff8;
+  border: 2px solid #2978a0;
+  border-radius: 4px;
+  padding: 12px 20px;
+  margin: 30px;
+  text-decoration: none;
+}
