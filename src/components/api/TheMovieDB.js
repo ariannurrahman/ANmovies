@@ -29,8 +29,6 @@ const TheMovieDB = ({ searchQuery }) => {
     searchById();
   }, [genreList, searchQuery]);
 
-  console.log(dataFromApi);
-
   const renderPoster = () => {
     if (!dataFromApi) return;
     return dataFromApi.map((item, index) => (
