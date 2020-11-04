@@ -1,0 +1,58 @@
+@use '../utility/_variable'
+@use '../utility/_layout'
+
+.tmdb-container
+    display: flex
+    width: 100%
+    .tmdb-wrapper
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        overflow-x: scroll
+        margin: 0
+        height: 100%
+        .movie-card
+            display: flex
+            flex-flow: column nowrap
+            flex-shrink: 1
+            padding: 30px
+            height: 72vh
+            width: 90%
+            box-shadow: variable.$shadow-box
+            margin: 24px
+            border-radius: variable.$radius
+            background-color: variable.$bg-color
+            color: variable.$white-color
+            .movie-card-top
+                @include layout.centerColumnFlex
+                img
+                    width: 300px
+                    border-radius: variable.$radius
+                    object-fit: cover
+            .movie-card-bottom
+                @include layout.centerColumnFlex
+                .movie-card-title
+                    @include layout.centerRowFlex
+                    justify-content: space-between
+                    width: 100%
+                    margin: 16px auto
+                    font-size: 24px
+                    font-weight: 700
+                    #title
+                        text-align: left
+                        width: 80%
+                    #vote
+                        text-align: center
+                        width: 20%
+                .movie-card-overview
+                    @include layout.centerColumnFlex
+                    border-top: 2px solid variable.$bg-color
+                    padding-top: 16px
+                    font-size: 16px
+
+                    
+
+                    
+
+
+

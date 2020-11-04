@@ -1,0 +1,29 @@
+.popular-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 32px auto;
+  width: 100%;
+}
+.popular-container .popular-desc {
+  text-align: start;
+  width: 100%;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+.popular-container .popular-card {
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+  padding-bottom: 24px;
+}
+.popular-container .popular-card img {
+  width: 280px;
+  height: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin: 0 10px;
+  object-fit: cover;
+}

@@ -1,49 +1,56 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
+import { SEARCH, POPULAR } from "../../actions";
 import "../../styles/home/dist/home.css";
+import Search from "../Search";
 
-const TheMovieDB = ({ searchQuery }) => {
-  const [dataFromApi, setDataFromApi] = useState(null);
-
-  const genreList = useCallback((data) => {
-    setDataFromApi(data);
-  }, []);
+const TheMovieDB = () => {
+  const dispatch = useDispatch();
+  const searchQuery = useSelector((state) => state.searchQuery.searchQuery);
+  const [searchChange, setSearchChange] = useState("");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const KEY_API = "abab3b40d24297977ea9e33e1c68dc93";
     const baseUrl = "https://api.themoviedb.org/3/";
-    const searchMovieURL = `search/movie?api_key=${KEY_API}&language=en-US&page=1&include_adult=false`;
+    const searchMovieURL = `search/movie?api_key=${KEY_API}&language=en-US&page=1`;
+    const getPopularURL = `https://api.themoviedb.org/3/movie/popular?api_key=${KEY_API}&language=en-US&page=1`;
+    // const getVideos = "https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&language=en-US";
     const searchById = async () => {
-      if (!searchQuery) return;
+      const getPopular = await axios.get(getPopularURL, {});
+      dispatch(POPULAR(getPopular.data.results));
+      if (!search) return;
       try {
         const searchResponse = await axios.get(baseUrl + searchMovieURL, {
-          params: { query: searchQuery },
+          params: { query: search },
         });
 
-        genreList(searchResponse.data.results);
+        dispatch(SEARCH(searchResponse.data.results));
       } catch (err) {
         console.log(err);
       }
     };
-
     searchById();
-  }, [genreList, searchQuery]);
+  }, [dispatch, searchQuery, search]);
 
-  const renderPoster = () => {
-    if (!dataFromApi) return;
-    return dataFromApi.map((item, index) => (
-      <img
-        src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
-        alt=""
-        key={index}
-      />
-    ));
+  const searchBar = (event) => {
+    setSearchChange(event.target.value);
+  };
+
+  const onSearchSubmit = (e) => {
+    e.preventDefault();
+    setSearch(searchChange);
   };
 
   return (
-    <div className="tmdb-container">
-      <div className="tmdb-wrapper">{renderPoster()}</div>
-    </div>
+    <React.Fragment>
+      <form onSubmit={onSearchSubmit}>
+        <input type="text" onChange={searchBar} value={searchChange} />
+        <input type="submit" />
+      </form>
+      <Search />
+    </React.Fragment>
   );
 };
 

@@ -3,11 +3,10 @@
 
 .home-container
     @include layout.centerColumnFlex
-    width: 100vw
-    margin: 5vh auto
+    width: 100%
     .home-wrapper
         @include layout.centerColumnFlex
-        width: 80%
+        width: 85%
         form
             @include layout.centerColumnFlex
             input[type='text']
@@ -31,15 +30,6 @@
                 border-radius: variable.$radius
                 border: none
                 box-shadow: variable.$shadow-box
-        .home-poster
-            display: flex
-            @include layout.centerColumnFlex
-    .tmdb-container
-        @include layout.centerColumnFlex
-        width: 100%
-        .tmdb-wrapper
-            width: 100%
-            img 
-                margin: 0 auto
-                width: 50%
+         
+ 
 
