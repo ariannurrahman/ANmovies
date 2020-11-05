@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.POPULAR = exports.SEARCH = void 0;
+exports.PLAY = exports.POPULAR = exports.SEARCH = void 0;
 
 var _types = require("./types");
 
@@ -24,3 +24,12 @@ var POPULAR = function POPULAR(data) {
 };
 
 exports.POPULAR = POPULAR;
+
+var PLAY = function PLAY(id) {
+  return {
+    type: _types.PLAY_MOVIE,
+    payload: id
+  };
+};
+
+exports.PLAY = PLAY;

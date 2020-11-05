@@ -12,9 +12,9 @@ const Header = () => {
         </div>
         <div className="header-nav-container">
           <NavLink to="/">Home</NavLink>
-          {/* <NavLink to="/">Browse</NavLink>
-          <NavLink to="/">Search</NavLink>
-          <NavLink to="/">Log in</NavLink> */}
+          {/* <NavLink to="/">Browse</NavLink> */}
+          <NavLink to="/search">Search</NavLink>
+          {/* <NavLink to="/">Log in</NavLink> */}
         </div>
       </div>
     </div>
