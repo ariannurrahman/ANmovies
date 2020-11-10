@@ -5,7 +5,8 @@ import Header from "./Header";
 import "../styles/dist/style.css";
 import StreamPage from "./StreamPage";
 import { useSelector } from "react-redux";
-
+import About from "./About";
+import Footer from "./Footer";
 const App = () => {
   const popularData = useSelector((state) => state.getPopular.popular);
   const topRateData = useSelector((state) => state.getTopRated.top_rate);
@@ -25,7 +26,9 @@ const App = () => {
           exact
           component={() => <StreamPage data={topRateData} genre={genreData} />}
         />
+        <Route path="/about" exact component={About} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 };

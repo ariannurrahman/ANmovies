@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+  padding-bottom: 8vh;
 }
 .similar-container .similar-title {
   text-align: center;
@@ -22,7 +23,9 @@
   margin: 20px;
   border: 3px solid #2978a0;
   padding: 2px 8px;
+  padding-bottom: 5vh;
   border-radius: 4px;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,6 +41,7 @@
   padding: 0 8px;
 }
 .similar-container .similar-card-container .similar-card .similar-card-top .similar-card-title {
+  text-align: center;
   font-size: 18px;
   font-weight: 600;
 }
@@ -46,7 +50,39 @@
 }
 .similar-container .similar-card-container .similar-card .similar-card-middle img {
   width: 100%;
+  border-radius: 4px;
 }
 .similar-container .similar-card-container .similar-card .similar-card-bottom {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 8px;
+}
+.similar-container .similar-card-container .similar-card .similar-card-bottom .similar-card-bottom_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.similar-container .similar-card-container .similar-card .similar-card-bottom .similar-card-bottom_top .rating {
+  font-size: 24px;
+  margin-right: 2px;
+}
+.similar-container .similar-card-container .similar-card .similar-card-bottom .similar-card-bottom_top img {
+  width: 24px;
+  margin-left: 2px;
+}
+.similar-container .similar-card-container .similar-card .similar-card-bottom input[type=button] {
+  margin-top: 12px;
+  padding: 4px 20px;
+  font-weight: 750;
+  font-size: 12px;
+  width: 100%;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+}
+.similar-container .similar-card-container .similar-card .similar-card-bottom input[type=button]:focus {
+  outline: none;
 }

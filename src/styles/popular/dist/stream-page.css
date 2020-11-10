@@ -42,6 +42,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 32px;
 }
 .pp-container .pp-wrapper .pp-bottom {
   display: flex;
@@ -114,5 +115,14 @@
   }
   .pp-container .pp-wrapper .pp-bottom .pp-bottom_right .pp-overview {
     margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pp-container .pp-wrapper .pp-top .pp-top_bottom .movie-player-container {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }

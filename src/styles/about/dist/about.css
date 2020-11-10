@@ -1,0 +1,38 @@
+.about-container {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about-container .about-wrapper {
+  width: 80%;
+}
+.about-container .about-wrapper .about-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about-container .about-wrapper .about-logo .logo {
+  border: 1px solid #2978a0;
+  margin: 20px;
+  padding: 16px;
+  width: 280px;
+  border-radius: 32px;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about-container .about-wrapper .about-logo .logo p {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 8px;
+}
+.about-container .about-wrapper .about-logo .logo img {
+  width: 80%;
+  max-width: 180px;
+}

@@ -51,11 +51,12 @@
   margin-top: 12vh;
   z-index: 90;
   padding-bottom: 5vh;
+  border-radius: 0 0 20px 20px;
 }
 .header-container .header-nav-wrapper a {
   color: #f4fff8;
-  border-bottom: 3px solid #2978a0;
-  width: 80%;
+  border-bottom: 2px solid #2978a0;
+  width: 50%;
   padding: 12px 8px;
   margin: 16px;
   text-decoration: none;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { SEARCH, POPULAR, TOP_RATE, GENRE } from "../../actions";
-import "../../styles/home/dist/home.css";
+import "../../styles/moviecard/dist/search-moviecard.css";
 import Search from "../Search";
 
 const TheMovieDB = () => {
@@ -51,15 +51,17 @@ const TheMovieDB = () => {
 
   return (
     <React.Fragment>
-      <form onSubmit={onSearchSubmit}>
-        <input
-          type="text"
-          onChange={searchBar}
-          value={searchChange}
-          placeholder="Search movies..."
-        />
-        <input type="submit" />
-      </form>
+      <div className="search-container">
+        <form onSubmit={onSearchSubmit}>
+          <input
+            type="text"
+            onChange={searchBar}
+            value={searchChange}
+            placeholder="Search movies..."
+          />
+          <input type="submit" />
+        </form>
+      </div>
       <Search />
     </React.Fragment>
   );

@@ -1,0 +1,16 @@
+@use '../utility/_variable'
+@use '../utility/_layout'
+
+.footer-container
+    width: 100vw
+    background-color: variable.$bg-color
+    color: variable.$white-color      
+    font-weight: 600
+    text-align: center
+    @include layout.centerColumnFlex  
+    font-size: 14px   
+    height: 40px   
+    box-shadow: variable.$shadow-box
+    opacity: 1
+    position: absolute
+    bottom: 0

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { PLAY } from "../actions";
-import "../styles/moviecard/dist/moviecard.css";
+import "../styles/moviecard/dist/search-moviecard.css";
 const Search = () => {
   const data = useSelector((state) => state.searchQuery.query);
   const dispatch = useDispatch();
@@ -42,8 +42,8 @@ const Search = () => {
   };
 
   return (
-    <div className="tmdb-container">
-      <div className="tmdb-wrapper">{renderMovie()}</div>
+    <div className="search-container">
+      <div className="search-wrapper">{renderMovie()}</div>
     </div>
   );
 };

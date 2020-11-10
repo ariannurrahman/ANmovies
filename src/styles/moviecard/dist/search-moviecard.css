@@ -1,8 +1,8 @@
-.tmdb-container {
+.search-container {
   display: flex;
   width: 100%;
 }
-.tmdb-container .tmdb-wrapper {
+.search-container .search-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -10,7 +10,7 @@
   margin: 0;
   height: 100%;
 }
-.tmdb-container .tmdb-wrapper .movie-card {
+.search-container .search-wrapper .movie-card {
   display: flex;
   flex-flow: column nowrap;
   flex-shrink: 1;
@@ -23,24 +23,24 @@
   background-color: #171219;
   color: #f4fff8;
 }
-.tmdb-container .tmdb-wrapper .movie-card .movie-card-top {
+.search-container .search-wrapper .movie-card .movie-card-top {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.tmdb-container .tmdb-wrapper .movie-card .movie-card-top img {
+.search-container .search-wrapper .movie-card .movie-card-top img {
   width: 300px;
   border-radius: 4px;
   object-fit: cover;
 }
-.tmdb-container .tmdb-wrapper .movie-card .movie-card-bottom {
+.search-container .search-wrapper .movie-card .movie-card-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.tmdb-container .tmdb-wrapper .movie-card .movie-card-bottom .movie-card-title {
+.search-container .search-wrapper .movie-card .movie-card-bottom .movie-card-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,15 +51,15 @@
   font-size: 24px;
   font-weight: 700;
 }
-.tmdb-container .tmdb-wrapper .movie-card .movie-card-bottom .movie-card-title #title {
+.search-container .search-wrapper .movie-card .movie-card-bottom .movie-card-title #title {
   text-align: left;
   width: 80%;
 }
-.tmdb-container .tmdb-wrapper .movie-card .movie-card-bottom .movie-card-title #vote {
+.search-container .search-wrapper .movie-card .movie-card-bottom .movie-card-title #vote {
   text-align: center;
   width: 20%;
 }
-.tmdb-container .tmdb-wrapper .movie-card .movie-card-bottom .movie-card-overview {
+.search-container .search-wrapper .movie-card .movie-card-bottom .movie-card-overview {
   display: flex;
   justify-content: center;
   align-items: center;

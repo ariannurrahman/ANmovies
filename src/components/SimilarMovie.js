@@ -2,6 +2,7 @@ import Axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import "../styles/similar/dist/similar.css";
+import star from "../images/icon/star.svg";
 const SimilarMovie = () => {
   const movie_id = useSelector((state) => state.getId.movie_id);
   const baseURL = "https://api.themoviedb.org/3/movie/";
@@ -41,9 +42,13 @@ const SimilarMovie = () => {
                 alt="card on similar section"
               />
             </div>
-            <div className="similar-card-bottom"></div>
-
-            {item.vote_average}
+            <div className="similar-card-bottom">
+              <div className="similar-card-bottom_top">
+                <div className="rating">{item.vote_average}</div>
+                <img src={star} alt="rating star" />
+              </div>
+              <input type="button" value="Go to movie.." />
+            </div>
           </div>
         );
       } else {

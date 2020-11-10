@@ -6,6 +6,7 @@
     display: flex
     flex-flow: column nowrap
     width: 100%
+    padding-bottom: 8vh
     .similar-title
         text-align: center
         padding: 5vh 0 0vh
@@ -23,7 +24,9 @@
             margin: 20px
             border: 3px solid variable.$border-color
             padding: 2px 8px
+            padding-bottom: 5vh
             border-radius: variable.$radius
+            box-shadow: variable.$shadow-box
             @include layout.centerColumnFlex
             .similar-card-top
                 height: 100px
@@ -31,11 +34,33 @@
                 border-bottom: 3px solid black
                 padding: 0 8px
                 .similar-card-title
+                    text-align: center
                     font-size: 18px
                     font-weight: 600
             .similar-card-middle
                 padding-top: 12px
                 img
                     width:100%
+                    border-radius: variable.$radius
             .similar-card-bottom
-                position: relative
+                @include layout.centerColumnFlex
+                margin-top: 8px
+                .similar-card-bottom_top
+                    @include layout.centerRowFlex
+                    .rating
+                        font-size: 24px
+                        margin-right: 2px
+                    img
+                        width: 24px
+                        margin-left: 2px
+                input[type='button']
+                    margin-top: 12px
+                    padding: 4px 20px
+                    font-weight: 750
+                    font-size: 12px
+                    width: 100%
+                    height: 32px
+                    border: none
+                    border-radius: variable.$radius
+                    &:focus
+                        outline: none

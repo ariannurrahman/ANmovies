@@ -5,6 +5,7 @@
   flex-direction: column;
   width: 100%;
   position: relative;
+  padding-bottom: 20vh;
 }
 .home-container .home-wrapper {
   display: flex;
@@ -13,23 +14,34 @@
   flex-direction: column;
   width: 85%;
 }
-.home-container .home-wrapper form {
+.home-container .home-wrapper .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.home-container .home-wrapper .search-container form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.home-container .home-wrapper form input[type=text] {
+.home-container .home-wrapper .search-container form input[type=text] {
+  margin-top: 20px;
   height: 50px;
-  width: 50vw;
+  width: 70vw;
   padding: 20px;
-  font-size: 20px;
+  font-size: 16px;
   box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  border-radius: 32px;
   border: none;
   min-width: 200px;
 }
-.home-container .home-wrapper form input[type=submit] {
+.home-container .home-wrapper .search-container form input[type=text]:focus {
+  outline: none;
+}
+.home-container .home-wrapper .search-container form input[type=submit] {
   font-size: 16px;
   padding: 8px;
   font-weight: 700;

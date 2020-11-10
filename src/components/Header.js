@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import anicon from "../images/icon/an.svg";
 import burgermenu from "../images/icon/burgermenu.png";
 import "../styles/header/dist/header.css";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const history = useHistory();
   const openMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -24,7 +25,12 @@ const Header = () => {
     <div className="header-container">
       <div className="header-wrapper">
         <div className="header-top">
-          <img src={anicon} alt="an icon" className="an-icon" />
+          <img
+            src={anicon}
+            alt="an icon skip link"
+            className="an-icon"
+            onClick={() => history.push("/")}
+          />
 
           <div className="header-nav-container">
             <img
