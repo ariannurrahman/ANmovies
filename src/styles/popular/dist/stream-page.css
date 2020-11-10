@@ -3,12 +3,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
-  padding-bottom: 20vh;
 }
 .pp-container .pp-wrapper {
   width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  flex-flow: column nowrap;
 }
 .pp-container .pp-wrapper .pp-top {
   display: flex;
@@ -16,6 +21,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  position: relative;
 }
 .pp-container .pp-wrapper .pp-top .pp-title {
   font-size: 24px;
@@ -39,27 +45,33 @@
 }
 .pp-container .pp-wrapper .pp-bottom {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-flow: column nowrap;
+  flex-direction: column;
   border-top: 3px solid #2978a0;
   padding-top: 32px;
-  height: 500px;
+  width: 100%;
+  position: relative;
+}
+.pp-container .pp-wrapper .pp-bottom .pp-bottom_img-container {
+  height: 100%;
   width: 100%;
 }
-.pp-container .pp-wrapper .pp-bottom img {
+.pp-container .pp-wrapper .pp-bottom .pp-bottom_img-container img {
   width: 100%;
-  max-width: 300px;
+  height: 100%;
+  max-height: 600px;
   object-fit: contain;
 }
 .pp-container .pp-wrapper .pp-bottom .pp-bottom_right {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .pp-container .pp-wrapper .pp-bottom .pp-bottom_right .pp-overview {
-  margin: 16px 0;
+  margin: 16px 8px;
   font-size: 16px;
   font-weight: 600;
-  margin-left: 16px;
   text-align: justify;
 }
 .pp-container .pp-wrapper .pp-bottom .pp-bottom_right .pp-rating-container {
@@ -67,6 +79,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   width: 100%;
+  height: 100%;
 }
 .pp-container .pp-wrapper .pp-bottom .pp-bottom_right .pp-rating-container .pp-rating {
   font-size: 36px;
@@ -78,14 +91,16 @@
 }
 .pp-container .pp-wrapper .pp-bottom .pp-bottom_right .pp-genre-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-flow: row wrap;
+  width: 100%;
 }
 .pp-container .pp-wrapper .pp-bottom .pp-bottom_right .pp-genre-wrapper .pp-genre-content {
   font-size: 24px;
   border: #2978a0 3px solid;
   border-radius: 4px;
-  margin: 8px 0;
+  margin: 8px 12px;
   padding: 4px 8px;
   color: #f4fff8;
   background-color: #171219;
@@ -94,14 +109,10 @@
 }
 
 @media screen and (min-width: 768px) {
-  .pp-container .pp-wrapper .pp-top_bottom .movie-player-container {
-    width: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
   .pp-container .pp-wrapper .pp-bottom {
-    flex-flow: row nowrap;
+    flex-direction: row;
+  }
+  .pp-container .pp-wrapper .pp-bottom .pp-bottom_right .pp-overview {
+    margin-left: 20px;
   }
 }

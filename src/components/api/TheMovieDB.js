@@ -16,10 +16,8 @@ const TheMovieDB = () => {
     const baseUrl = "https://api.themoviedb.org/3/";
     const searchMovieURL = `search/movie?api_key=${KEY_API}&language=en-US&page=1`;
     const getPopularURL = `https://api.themoviedb.org/3/movie/popular?api_key=${KEY_API}&language=en-US&page=1`;
-    // const getVideos = "https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&language=en-US";
     const getTopRatedURL = `
     https://api.themoviedb.org/3/movie/top_rated?api_key=${KEY_API}&language=en-US&page=1`;
-
     const getGenreURL = `https://api.themoviedb.org/3/genre/movie/list?api_key=${KEY_API}&language=en-US`;
     const searchById = async () => {
       const getPopular = await axios.get(getPopularURL, {});

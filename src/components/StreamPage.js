@@ -3,6 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import "../styles/popular/dist/stream-page.css";
 import MoviePlayer from "./MoviePlayer";
 import star from "../images/icon/star.svg";
+import SimilarMovie from "./SimilarMovie";
 const PopularPage = (props) => {
   const history = useHistory();
   const [dataEachPage, setDataEachPage] = useState({
@@ -58,10 +59,12 @@ const PopularPage = (props) => {
           </div>
         </div>
         <div className="pp-bottom">
-          <img
-            src={`https://image.tmdb.org/t/p/w500${dataEachPage.img}`}
-            alt=""
-          />
+          <div className="pp-bottom_img-container">
+            <img
+              src={`https://image.tmdb.org/t/p/w500${dataEachPage.img}`}
+              alt=""
+            />
+          </div>
           <div className="pp-bottom_right">
             <div className="pp-overview">{dataEachPage.overview}</div>
             <div className="pp-genre-wrapper">
@@ -81,6 +84,7 @@ const PopularPage = (props) => {
             </div>
           </div>
         </div>
+        <SimilarMovie />
       </div>
     </div>
   );

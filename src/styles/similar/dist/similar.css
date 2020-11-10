@@ -1,0 +1,52 @@
+.similar-container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+.similar-container .similar-title {
+  text-align: center;
+  padding: 5vh 0 0vh;
+  font-size: 32px;
+  font-weight: 700;
+}
+.similar-container .similar-card-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.similar-container .similar-card-container .similar-card {
+  background-color: #171219;
+  color: #f4fff8;
+  width: 240px;
+  margin: 20px;
+  border: 3px solid #2978a0;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.similar-container .similar-card-container .similar-card .similar-card-top {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 3px solid black;
+  padding: 0 8px;
+}
+.similar-container .similar-card-container .similar-card .similar-card-top .similar-card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.similar-container .similar-card-container .similar-card .similar-card-middle {
+  padding-top: 12px;
+}
+.similar-container .similar-card-container .similar-card .similar-card-middle img {
+  width: 100%;
+}
+.similar-container .similar-card-container .similar-card .similar-card-bottom {
+  position: relative;
+}

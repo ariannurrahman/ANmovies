@@ -1,0 +1,41 @@
+@use '../utility/_variable'
+@use '../utility/_layout'
+
+
+.similar-container
+    display: flex
+    flex-flow: column nowrap
+    width: 100%
+    .similar-title
+        text-align: center
+        padding: 5vh 0 0vh
+        font-size: 32px
+        font-weight: 700
+    .similar-card-container
+        display: flex
+        justify-content: center
+        flex-flow: row wrap
+        width: 100%
+        .similar-card
+            background-color: variable.$bg-color
+            color: variable.$white-color
+            width: 240px
+            margin: 20px
+            border: 3px solid variable.$border-color
+            padding: 2px 8px
+            border-radius: variable.$radius
+            @include layout.centerColumnFlex
+            .similar-card-top
+                height: 100px
+                @include layout.centerColumnFlex
+                border-bottom: 3px solid black
+                padding: 0 8px
+                .similar-card-title
+                    font-size: 18px
+                    font-weight: 600
+            .similar-card-middle
+                padding-top: 12px
+                img
+                    width:100%
+            .similar-card-bottom
+                position: relative
