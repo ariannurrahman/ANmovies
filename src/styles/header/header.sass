@@ -5,18 +5,49 @@
     background-color: variable.$bg-color
     box-shadow: variable.$shadow-box
     width: 100%
-    height: 10vh
+    min-height: 12vh
+    height: 100%
+    top: 0
+    position: relative
+    z-index: 100
     .header-wrapper
-        @include layout.centerRowFlex
-        justify-content: space-between
-        width: 90%
-        .header-logo-wrapper
-            img 
-                width: 50%
+        display: flex
+        justify-content: space-around
+        width:100vw
+        height: 100%
+        position: absolute
+        z-index: 100
+        .header-top
+            @include layout.centerRowFlex
+            justify-content: space-between
+            width: 80%
+            height: 100%
+            position: absolute
+            .an-icon
+                width: 48px
+                background-color: variable.$white-color
+                border-radius: variable.$radius  
+            .header-nav-container
+                .burger-menu
+                    width: 32px
+                    background-color: variable.$white-color
+                    border-radius: variable.$radius
+        
+    .header-nav-wrapper
+        @include layout.centerColumnFlex
+        width:100vw
+        background-color: variable.$bg-color  
+        position: relative
+        margin-top: 12vh
+        z-index: 90
+        padding-bottom: 5vh
         a
             color: variable.$white-color
-            border: 2px solid variable.$border-color
-            border-radius: variable.$radius
-            padding: 12px 20px
-            margin: 30px
+            border-bottom: 3px solid variable.$border-color
+            width: 80%
+            padding: 12px 8px
+            margin: 16px
             text-decoration: none
+            font-size: 16px
+            text-align: center
+            text-transform: capitalize

@@ -1,0 +1,86 @@
+@use '../utility/_variable'
+@use '../utility/_layout'
+
+.pp-container 
+    @include layout.centerColumnFlex
+    width: 100vw
+    margin: 0 auto
+    padding-bottom: 20vh
+    .pp-wrapper
+        width: 80%
+        .pp-top
+            @include layout.centerColumnFlex
+            width: 100%
+            .pp-title
+                font-size: 24px
+                font-weight: 700
+                margin-top: 28px
+                text-align: center
+                margin-bottom: 32px
+            .pp-top_bottom
+                @include layout.centerRowFlex
+                
+                .movie-player-container
+                    width: 95vw
+                    @include layout.centerColumnFlex
+                    
+        .pp-bottom
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            flex-flow: column nowrap
+            border-top: 3px solid variable.$border-color
+            padding-top: 32px
+            height: 500px
+            width: 100%
+            img
+                width: 100%
+                max-width: 300px
+                object-fit: contain
+
+            .pp-bottom_right
+                width: 100%
+                .pp-overview
+                    margin: 16px 0
+                    font-size: 16px
+                    font-weight: 600
+                    margin-left: 16px
+                    text-align: justify
+                .pp-rating-container
+                    display: flex
+                    justify-content: flex-end
+                    align-items: flex-end  
+                    width: 100%
+                    .pp-rating
+                        font-size: 36px
+                        font-weight: 700  
+                        margin-right: 12px  
+                    img
+                        width: 50px  
+                .pp-genre-wrapper
+                    display: flex
+                    justify-content: space-around
+                    flex-flow: row wrap
+                    .pp-genre-content
+                        font-size: 24px    
+                        border: variable.$border-color 3px solid
+                        border-radius: variable.$radius
+                        margin: 8px 0
+                        padding: 4px 8px
+                        color: variable.$white-color
+                        background-color: variable.$bg-color
+                        font-weight: 600
+                        box-shadow: variable.$shadow-box
+            
+
+@media screen and ( min-width:768px  )
+    .pp-container
+        .pp-wrapper
+            .pp-top_bottom
+                .movie-player-container
+                    width: 80vw
+                    @include layout.centerColumnFlex
+                  
+            .pp-bottom
+                flex-flow: row nowrap
+    

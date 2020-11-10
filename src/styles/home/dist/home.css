@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  position: relative;
 }
 .home-container .home-wrapper {
   display: flex;

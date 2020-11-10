@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import ReactPlayer from "react-player/youtube";
-
+import "../styles/popular/dist/stream-page.css";
 const MoviePlayer = () => {
   const [key, setKey] = useState("");
   const getVideosURL =
@@ -22,9 +22,7 @@ const MoviePlayer = () => {
     movieById();
   }, [key, setKey, movie_id]);
 
-  console.log(key);
-
-  return <ReactPlayer url={key} />;
+  return <ReactPlayer url={key} className="movie-player" width="100%" />;
 };
 
 export default MoviePlayer;

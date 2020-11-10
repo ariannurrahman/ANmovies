@@ -3,14 +3,15 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 32px auto;
+  margin: 20px auto;
   width: 100%;
+  position: relative;
 }
 .popular-container .popular-desc {
   text-align: start;
   width: 100%;
-  font-size: 32px;
-  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: 700;
 }
 .popular-container .popular-card {
   display: flex;
@@ -37,10 +38,12 @@
 }
 .popular-container .popular-card .card input[type=button] {
   margin: 12px 0;
-  padding: 8px 20px;
-  border-radius: 4px;
+  padding: 12px 24px;
+  border-radius: 60px;
   border: none;
-  border: 2px solid #2978a0;
-  background-color: #f4fff8;
-  color: #171219;
+  font-weight: 700;
+  border: 1px solid #2978a0;
+  background-color: #171219;
+  color: #f4fff8;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
 }
